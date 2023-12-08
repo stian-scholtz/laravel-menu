@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use Stianscholtz\LaravelMenu\Menu;
+use Stianscholtz\LaravelMenu\Middleware\MenuMiddleware;
+
+class {{ class }} extends MenuMiddleware
+{
+    /**
+     * Build the menu.
+     *
+     * @param Menu $menu
+     */
+    public function build(Menu $menu): void
+    {
+       //TODO: Build menu
+    }
+}
