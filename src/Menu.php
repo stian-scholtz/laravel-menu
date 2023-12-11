@@ -50,7 +50,7 @@ class Menu implements JsonSerializable, Arrayable
         if ($closure && $this->callAccessCallback($accessCallback)) {
             $subMenu = new Menu();
             call_user_func($closure, $subMenu);
-            $active = $subMenu->items->contains('current', 1);
+            $active = $subMenu->items->contains('active', 1);
             $items = $subMenu->toArray()['items'];
             $this->addItem(compact('label', 'icon', 'active', 'items'));
         }
