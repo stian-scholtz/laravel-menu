@@ -4,7 +4,6 @@ namespace Stianscholtz\LaravelMenu\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
 use Stianscholtz\LaravelMenu\Menu;
 
 abstract class MenuMiddleware
@@ -15,7 +14,7 @@ abstract class MenuMiddleware
     {
         $this->build($menu = new Menu);
 
-        Inertia::share('menu', $menu);
+        session()->put('menu', $menu);
 
         return $next($request);
     }

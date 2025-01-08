@@ -3,12 +3,11 @@
 namespace Stianscholtz\LaravelMenu;
 
 use Closure;
-use Gate;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Gate;
 use InvalidArgumentException;
 use JsonSerializable;
-use URL;
 
 class Menu implements JsonSerializable, Arrayable
 {
@@ -30,9 +29,9 @@ class Menu implements JsonSerializable, Arrayable
     public function route(string $label, string $routeName, array $routeParams = [], string $icon = null, callable|array|string $accessCallback = null): static
     {
         if ($this->callAccessCallback($accessCallback)) {
-            $url = URL::route($routeName, $routeParams);
+            $url = url()->route($routeName, $routeParams);
             $active = request()->getPathInfo() === parse_url($url)['path'];
-            $this->addItem(compact('label', 'routeName', 'routeParams', 'icon', 'active'));
+            $this->addItem(compact('label', 'routeName', 'routeParams', 'icon', 'active', 'url'));
         }
 
         return $this;
