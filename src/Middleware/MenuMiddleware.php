@@ -12,9 +12,9 @@ abstract class MenuMiddleware
 
     public function handle(Request $request, Closure $next): mixed
     {
-        $this->build($menu = new Menu);
+        $this->build($menu = app(Menu::class));
 
-        session()->put('menu', $menu);
+        app()->instance(Menu::class, $menu);
 
         return $next($request);
     }

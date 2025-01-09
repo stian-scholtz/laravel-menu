@@ -15,4 +15,11 @@ class LaravelMenuServiceProvider extends ServiceProvider
             ]);
         }
     }
+
+    public function register(): void
+    {
+        $this->app->singleton(Menu::class, function ($app) {
+            return new Menu();
+        });
+    }
 }
