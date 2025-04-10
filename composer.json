@@ -1,46 +1,46 @@
 {
-    "name": "stianscholtz/laravel-menu",
-    "description": "A Laravel package to create navigation menus using routes and policies.",
-    "type": "library",
-    "keywords": [
-        "stian-scholtz",
-        "laravel",
-        "menu"
-    ],
-    "homepage": "https://github.com/stian-scholtz/laravel-menu",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Stian Scholtz",
-            "email": "stian678@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "laravel/framework": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Stianscholtz\\LaravelMenu\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {}
-    },
-    "scripts": {},
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {}
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Stianscholtz\\LaravelMenu\\LaravelMenuServiceProvider"
-            ],
-            "aliases": {}
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "stianscholtz/laravel-menu",
+  "description": "A Laravel package to create navigation menus using routes and policies.",
+  "type": "library",
+  "keywords": [
+    "stian-scholtz",
+    "laravel",
+    "menu"
+  ],
+  "homepage": "https://github.com/stian-scholtz/laravel-menu",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Stian Scholtz",
+      "email": "stian678@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "laravel/framework": ">=10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stianscholtz\\LaravelMenu\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "scripts": {},
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {}
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Stianscholtz\\LaravelMenu\\LaravelMenuServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
